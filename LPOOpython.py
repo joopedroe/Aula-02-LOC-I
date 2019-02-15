@@ -20,7 +20,8 @@ class Atividade:
         self.projeto=projeto
     def __str__(self):
         return "Atividade : nome :"+ self.nome +"   Prioridade: "+str(self.prioridade)
-
+class Endereco:
+    pass
 p=Pessoa("João","03-09-98")
 pro=Projeto("Projeto 1","03-02-2019","20-10-2019")
 ati=Atividade("Atividade 1",1,p,pro)
