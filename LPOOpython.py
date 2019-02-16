@@ -17,9 +17,13 @@ class Atividade:
         self.nome=nome
         self.prioridade=prioridade
         self.pessoa=pessoa
-        self.projeto=projeto
     def __str__(self):
         return "Atividade : nome :"+ self.nome +"   Prioridade: "+str(self.prioridade)
+class AtividadeProjeto:
+    def __init__(self,projeto,atividade):
+        self.atividade=atividade
+        self.projeto=projeto
+
 class Endereco:
     pass
 p=Pessoa("João","03-09-98")
@@ -27,6 +31,8 @@ pro=Projeto("Projeto 1","03-02-2019","20-10-2019")
 ati=Atividade("Atividade 1",1,p,pro)
 print(ati.pessoa.nome,'\n')
 print(ati)
+pa=AtividadeProjeto(pro,ati)
+print(pa.atividade.nome)
 
 
 
